@@ -39,7 +39,7 @@ export const SITE: {
   builderUrl: string
 } = {
   name: 'Amara',
-  tagline: 'Locs, braids & natural hair — done with intention.',
+  tagline: 'Locs, braids & natural hair',
   domain: 'amaralocs.com',
   area: '',
   instagramHandle: '',

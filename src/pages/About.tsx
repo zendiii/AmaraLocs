@@ -3,14 +3,12 @@ import { SITE } from '../config/site'
 import { casualPhoto, headshot } from '../data/portfolio'
 
 /*
- * PLACEHOLDER copy. Bio and policies are typical for loc stylists. Amara
- * should rewrite them in her own voice and confirm every policy before launch,
- * since clients will hold her to what's published here.
+  * About page content.
  */
 const POLICIES = [
   { title: 'Arrive ready', body: 'Please come with hair washed, dried, and detangled unless your service includes a wash.' },
   { title: 'Running late', body: 'There’s a 15-minute grace period. After that, your appointment may need to be shortened or rescheduled.' },
-  { title: 'Cancellations', body: 'Please cancel or reschedule at least 24 hours ahead so someone else can take the spot.' },
+  { title: 'Cancellations', body: 'Please cancel or reschedule at least 24 hours ahead.' },
   { title: 'Guests', body: 'To keep the space calm, please don’t bring extra guests unless we’ve arranged it ahead of time.' },
 ]
 
@@ -32,12 +30,8 @@ export default function About() {
           <h1 className="mt-2 text-5xl">Hi, I’m {SITE.name}.</h1>
           <div className="mt-6 space-y-4 leading-relaxed text-mocha">
             <p>
-              I am a Loctician and natural hair stylist who believes great hair starts with a healthy scalp. From
+              I am a Loctician and natural hair stylist who believes great hair starts with a healthy scalp! From
               your very first starter locs to your hundredth retwist, I’m here for the whole journey.
-            </p>
-            <p>
-              Every appointment is one-on-one and unhurried, so we have time to talk about your hair, your
-              routine, and where you want to take it next.
             </p>
           </div>
           <BookButton className="mt-8" />
