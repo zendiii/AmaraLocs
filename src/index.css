@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/dm-sans";
+
+/*
+ * Amara — design system.
+ *
+ * Warm, earthy salon palette: cream paper, clay/terracotta accent, deep
+ * espresso ink. Placeholder brand until Amara has a logo — when she does,
+ * resample these tokens from it (as Dino's Tires did) rather than layering
+ * new colors on top.
+ *
+ * `clay` is darkened past a typical terracotta on purpose: white text on it
+ * and it as text on cream both clear WCAG AA (4.5:1).
+ *
+ * Tailwind v4 generates utilities from these tokens (bg-clay, font-display,
+ * etc.) — there is no tailwind.config.js.
+ */
+@theme {
+  --color-cream: #f8f3ec;
+  --color-sand: #ede3d6;
+  --color-linen: #fffdf9;
+  --color-clay: #9a5236;
+  --color-clay-hover: #7f412a;
+  --color-gold: #c9a27a;
+  --color-espresso: #2b1d16;
+  --color-mocha: #6b5448;
+  --color-edge: #e0d3c3;
+
+  /*
+   * Fraunces (soft, editorial serif) for headings; DM Sans for body.
+   * Both self-hosted via @fontsource — no external font CDN.
+   */
+  --font-display: "Fraunces Variable", Georgia, serif;
+  --font-sans: "DM Sans Variable", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-cream);
+    color: var(--color-espresso);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+}
+
+/* Small uppercase label above section headings. */
+@utility eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-clay);
+}
