@@ -4,7 +4,6 @@ import type { PortfolioItem } from '../data/portfolio'
 interface Props {
   item: PortfolioItem
   className?: string
-  /** Above-the-fold media loads eagerly; everything else waits until scrolled near. */
   eager?: boolean
 }
 
@@ -25,12 +24,6 @@ function usePrefersReducedMotion(): boolean {
   return reduced
 }
 
-/**
- * A photo or short looping video of Amara's work. Videos autoplay muted and
- * inline (the only way mobile browsers allow autoplay, and it keeps iOS from
- * going fullscreen) — unless the visitor asked for reduced motion, in which
- * case they get the poster and play controls instead.
- */
 export default function MediaTile({ item, className = '', eager = false }: Props) {
   const reducedMotion = usePrefersReducedMotion()
   const media = 'h-full w-full object-cover'

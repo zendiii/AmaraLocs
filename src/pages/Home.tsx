@@ -18,7 +18,6 @@ export default function Home() {
 
   return (
     <>
-      {/* Hero */}
       <section className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-24">
         <div>
           <p className="eyebrow">Locs · Braids · Natural hair</p>
@@ -47,7 +46,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Two paths: new clients vs. returning clients */}
       <section className="mx-auto grid max-w-6xl gap-6 px-4 sm:px-6 md:grid-cols-2">
         <div className="rounded-3xl bg-espresso p-8 text-cream">
           <p className="eyebrow text-gold">New here?</p>
@@ -69,7 +67,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured services */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
@@ -87,7 +84,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How booking works */}
       <section className="bg-linen py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <p className="eyebrow">How it works</p>
@@ -104,7 +100,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Closing CTA */}
       <section className="mx-auto max-w-6xl px-4 py-20 text-center sm:px-6">
         <h2 className="text-4xl">Ready when you are.</h2>
         <p className="mx-auto mt-3 max-w-md text-mocha">Pick a time that works for you. Openings go fast.</p>

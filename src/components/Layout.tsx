@@ -13,8 +13,6 @@ export default function Layout() {
   const { pathname, hash } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
 
-  // New page → start at the top (SPAs keep the old scroll position otherwise),
-  // unless the link targets an anchor like /services#loc-retwist.
   useEffect(() => {
     setMenuOpen(false)
     if (!hash) window.scrollTo(0, 0)

@@ -1,15 +1,3 @@
-/*
- * Service menu.
- *
- * PLACEHOLDERS: prices and durations are typical market ranges, not Amara's
- * real menu. Replace them before launch — and keep them in sync with the
- * services in Square, since Square is what actually takes the booking.
- *
- * `slug` is the public, stable ID used in ad links:
- *   amaralocs.com/book?service=starter-locs-comb-coils
- * Renaming a slug breaks any ad already running with the old link.
- */
-
 export type Category = 'Consultation' | 'Locs' | 'Braids' | 'Natural Hair'
 
 export const CATEGORIES: Category[] = ['Consultation', 'Locs', 'Braids', 'Natural Hair']
@@ -19,16 +7,9 @@ export interface Service {
   name: string
   category: Category
   description: string
-  /** Display string — "from $X" style pricing is normal for hair since length/density vary. */
   price: string
   duration: string
-  /**
-   * How often clients typically come back for this. Surfaced on the card as a
-   * gentle rebooking cue — the main lever for turning one-time clients into
-   * recurring ones.
-   */
   rebook?: string
-  /** Square's direct link for this service. Empty → falls back to the general booking site. */
   squareUrl?: string
   featured?: boolean
 }
@@ -45,7 +26,6 @@ export const SERVICES: Service[] = [
     featured: true,
   },
 
-  // Locs
   {
     slug: 'starter-locs-comb-coils',
     name: 'Starter Locs — Comb Coils',
@@ -102,7 +82,6 @@ export const SERVICES: Service[] = [
     duration: 'Varies',
   },
 
-  // Braids
   {
     slug: 'knotless-braids',
     name: 'Knotless Braids',
@@ -141,7 +120,6 @@ export const SERVICES: Service[] = [
     rebook: 'Refresh in 2–3 weeks',
   },
 
-  // Natural Hair
   {
     slug: 'two-strand-twists',
     name: 'Two-Strand Twists',

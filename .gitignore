@@ -1,4 +1,3 @@
-# Logs
 logs
 *.log
 npm-debug.log*
@@ -8,24 +7,17 @@ dist
 dist-ssr
 *.local
 
-# Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
 *.sw?
 
-# Private planning notes — not part of the shipped project
 goal.md
 notes/
 
-# Local secrets / Vercel link
 .vercel
 .env*
 
-# Raw phone originals (HEIC/HEVC, tens of MB) — optimized output in
-# src/assets/media/ is committed instead. Regenerate with:
-#   bash scripts/optimize-media.sh
-# KEEP YOUR OWN BACKUP of these folders.
 src/data/photos/
 src/data/gallery/

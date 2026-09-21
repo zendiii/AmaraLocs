@@ -6,7 +6,6 @@ import { CATEGORIES, SERVICES } from '../data/services'
 export default function Services() {
   const { hash } = useLocation()
 
-  // React Router doesn't scroll to #anchors on its own.
   useEffect(() => {
     if (hash) document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'smooth' })
   }, [hash])

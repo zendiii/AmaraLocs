@@ -3,11 +3,6 @@ import BookButton from '../components/BookButton.tsx'
 import ServiceCard from '../components/ServiceCard.tsx'
 import { CATEGORIES, SERVICES, findService } from '../data/services'
 
-/*
- * Landing page for ads. An ad links to /book?service=<slug> and the client
- * lands on that service with one button to its Square booking page. Without
- * a slug it becomes a quick picker.
- */
 export default function Book() {
   const [params] = useSearchParams()
   const selected = findService(params.get('service'))

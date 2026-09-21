@@ -3,11 +3,6 @@ interface Props {
   className?: string
 }
 
-/**
- * Stand-in for real work photos until Amara supplies them. Kept visibly a
- * placeholder (not stock photos of someone else's work) — a stylist's
- * portfolio is the thing new clients judge her on.
- */
 export default function PhotoPlaceholder({ label, className = '' }: Props) {
   return (
     <div

@@ -19,9 +19,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (HEIC → JPEG, HEVC → H.264 MP4, iPhone HDR → SDR, audio stripped, posters),
   cutting ~15 MB of originals to ~3 MB
 - Soft Locs service (Braids)
+- `FILES.md`: a guide to every file's purpose, when to edit it, and the
+  reasoning behind how it's built
 
 ### Changed
 
+- Removed all code comments; their explanations now live in `FILES.md`
 - Raw originals in `src/data/photos/` and `src/data/gallery/` are gitignored;
   only the optimized files in `src/assets/media/` are committed
 - Soft-locs photo cropped to remove bystanders in the background

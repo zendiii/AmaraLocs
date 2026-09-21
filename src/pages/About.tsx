@@ -2,9 +2,6 @@ import BookButton from '../components/BookButton.tsx'
 import { SITE } from '../config/site'
 import { casualPhoto, headshot } from '../data/portfolio'
 
-/*
-  * About page content.
- */
 const POLICIES = [
   { title: 'Arrive ready', body: 'Please come with hair washed, dried, and detangled unless your service includes a wash.' },
   { title: 'Running late', body: 'There’s a 15-minute grace period. After that, your appointment may need to be shortened or rescheduled.' },
@@ -16,7 +13,6 @@ export default function About() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
       <section className="grid items-center gap-10 md:grid-cols-2">
-        {/* Headshot with a smaller, off-duty photo overlapping its corner. */}
         <div className="relative mb-12 mr-8 md:max-w-md">
           <div className="overflow-hidden rounded-2xl bg-sand">
             <img src={headshot} alt={`${SITE.name}, loc stylist`} className="aspect-[4/5] w-full object-cover object-top" />

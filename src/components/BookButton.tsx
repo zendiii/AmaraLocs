@@ -14,10 +14,6 @@ interface Props {
   children?: ReactNode
 }
 
-/**
- * The one way to start a booking. Resolves the destination through
- * services/booking.ts so no component hardcodes a Square URL.
- */
 export default function BookButton({ service, variant = 'solid', className = '', children }: Props) {
   const target = bookingTarget(service)
   const base = `inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition-colors ${STYLES[variant]} ${className}`

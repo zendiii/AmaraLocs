@@ -1,14 +1,3 @@
-/*
- * Real photos and videos of Amara's work.
- *
- * Files come from scripts/optimize-media.sh (raw phone originals live in
- * src/data/photos/ and src/data/gallery/, which are gitignored). Add new work
- * by dropping the original there, adding a line to that script, and adding an
- * entry here.
- *
- * `service` links the piece to its menu item so the gallery can say
- * "Book this style" — seeing the result is what converts a new client.
- */
 import softLocs from '../assets/media/soft-locs.jpg'
 import amaraLocs from '../assets/media/amara-locs.jpg'
 import shortLocsRetwist from '../assets/media/short-locs-retwist.mp4'
@@ -42,7 +31,6 @@ export const PORTFOLIO: Record<'softLocs' | 'twoStrand' | 'shortLocsRetwist' | '
   amaraLocs: { kind: 'image', src: amaraLocs, label: 'Amara’s own locs' },
 }
 
-/** Gallery order. */
 export const GALLERY: PortfolioItem[] = [
   PORTFOLIO.twoStrand,
   PORTFOLIO.softLocs,
