@@ -19,11 +19,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (HEIC → JPEG, HEVC → H.264 MP4, iPhone HDR → SDR, audio stripped, posters),
   cutting ~15 MB of originals to ~3 MB
 - Soft Locs service (Braids)
+- Square booking link connected: every Book button now opens Amara's Square
+  booking page (Amara Locs & Co.)
 - `FILES.md`: a guide to every file's purpose, when to edit it, and the
   reasoning behind how it's built
 
 ### Changed
 
+- Business name is now "Amara Locs & Co." (header, footer, page title) to
+  match her Square booking page; `SITE.stylistName` keeps "Amara" for
+  first-person copy
 - Removed all code comments; their explanations now live in `FILES.md`
 - Raw originals in `src/data/photos/` and `src/data/gallery/` are gitignored;
   only the optimized files in `src/assets/media/` are committed

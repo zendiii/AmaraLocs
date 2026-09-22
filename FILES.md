@@ -113,9 +113,9 @@ Files in `public/` are served as-is at the site root, for example `/favicon.svg`
 
 | Export | What it holds |
 |---|---|
-| `BOOKING.siteUrl` | Square booking site link. **Empty right now**, so Book buttons fall back to Instagram or email. |
+| `BOOKING.siteUrl` | Square booking site link (Amara Locs & Co.). Stored as the final `book.squareup.com` address, so ad visitors skip the redirect from the short `squareup.com/appointments/book/…` link. |
 | `BOOKING_CONFIGURED` | `true` once `siteUrl` is filled in. |
-| `SITE` | Name, tagline, domain, service area, Instagram handle, email, and the "Site by" footer credit. Leave a field empty to hide it. |
+| `SITE` | Business name ("Amara Locs & Co.", matching Square, shown in the header, footer and title), stylist name ("Amara", used where she speaks as a person, like "Hi, I'm Amara"), tagline, domain, service area, Instagram handle, email, and the "Site by" footer credit. Leave a field empty to hide it. |
 | `INSTAGRAM_URL` | Built from the Instagram handle. |
 
 **Getting the Square link:** Square Dashboard → Appointments → Online booking → Channels → copy the "Square Online Booking site" link into `siteUrl`.

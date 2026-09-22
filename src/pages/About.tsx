@@ -15,15 +15,15 @@ export default function About() {
       <section className="grid items-center gap-10 md:grid-cols-2">
         <div className="relative mb-12 mr-8 md:max-w-md">
           <div className="overflow-hidden rounded-2xl bg-sand">
-            <img src={headshot} alt={`${SITE.name}, loc stylist`} className="aspect-[4/5] w-full object-cover object-top" />
+            <img src={headshot} alt={`${SITE.stylistName}, loc stylist`} className="aspect-[4/5] w-full object-cover object-top" />
           </div>
           <div className="absolute -right-8 -bottom-12 w-2/5 overflow-hidden rounded-2xl border-4 border-cream bg-sand shadow-lg">
-            <img src={casualPhoto} alt={`${SITE.name} smiling`} className="aspect-[4/5] w-full object-cover" loading="lazy" />
+            <img src={casualPhoto} alt={`${SITE.stylistName} smiling`} className="aspect-[4/5] w-full object-cover" loading="lazy" />
           </div>
         </div>
         <div>
           <p className="eyebrow">About</p>
-          <h1 className="mt-2 text-5xl">Hi, I’m {SITE.name}.</h1>
+          <h1 className="mt-2 text-5xl">Hi, I’m {SITE.stylistName}.</h1>
           <div className="mt-6 space-y-4 leading-relaxed text-mocha">
             <p>
               I am a Loctician and natural hair stylist who believes great hair starts with a healthy scalp! From

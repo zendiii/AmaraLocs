@@ -1,11 +1,12 @@
 export const BOOKING: { siteUrl: string } = {
-  siteUrl: '',
+  siteUrl: 'https://book.squareup.com/appointments/eqbaqfxdzb1q2s/location/L48SPRGGYPKCG',
 }
 
 export const BOOKING_CONFIGURED: boolean = BOOKING.siteUrl !== ''
 
 export const SITE: {
-  name: string
+  businessName: string
+  stylistName: string
   tagline: string
   domain: string
   area: string
@@ -14,7 +15,8 @@ export const SITE: {
   builderName: string
   builderUrl: string
 } = {
-  name: 'Amara',
+  businessName: 'Amara Locs & Co.',
+  stylistName: 'Amara',
   tagline: 'Locs, braids & natural hair',
   domain: 'amaralocs.com',
   area: '',

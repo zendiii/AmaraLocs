@@ -9,6 +9,16 @@ const NAV = [
   { to: '/about', label: 'About' },
 ]
 
+function Wordmark() {
+  const [main, suffix] = SITE.businessName.split(' & ')
+  return (
+    <>
+      {main}
+      {suffix && <span className="text-clay"> &amp; {suffix}</span>}
+    </>
+  )
+}
+
 export default function Layout() {
   const { pathname, hash } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
@@ -26,8 +36,7 @@ export default function Layout() {
       <header className="sticky top-0 z-20 border-b border-edge bg-cream/90 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
           <Link to="/" className="font-display text-2xl">
-            {SITE.name}
-            <span className="text-clay">.</span>
+            <Wordmark />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
@@ -80,8 +89,7 @@ export default function Layout() {
         <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-12 sm:px-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="font-display text-2xl">
-              {SITE.name}
-              <span className="text-clay">.</span>
+              <Wordmark />
             </p>
             <p className="mt-2 max-w-xs text-sm text-mocha">{SITE.tagline}</p>
             {SITE.area && <p className="mt-1 text-sm text-mocha">{SITE.area}</p>}
@@ -104,7 +112,7 @@ export default function Layout() {
         </div>
         <div className="mx-auto flex max-w-6xl justify-between px-4 pb-6 text-xs text-mocha sm:px-6">
           <span>
-            © {new Date().getFullYear()} {SITE.name} · v{__APP_VERSION__}
+            © {new Date().getFullYear()} {SITE.businessName} · v{__APP_VERSION__}
           </span>
           <a href={SITE.builderUrl} className="hover:text-clay" rel="noopener" target="_blank">
             Site by {SITE.builderName}
