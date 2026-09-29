@@ -80,6 +80,7 @@ Files in `public/` are served as-is at the site root, for example `/favicon.svg`
 | Resized (1200px photos, 720px videos) | Took the media from about 15 MB to about 3 MB. |
 | Poster image per video | Shows instantly while the video loads. |
 | Crops | `headshot.png` loses the phone's status-bar pill. `soft-locs` is cropped to remove bystanders. `amara 2` becomes a 4:5 portrait. |
+| `print/assets/locs-panel.jpg` | The business card's loc texture: a tall crop of the soft-locs photo, highlights compressed and warmed, then faded into the card's espresso background so there's no hard edge. |
 
 **Adding new work:**
 
@@ -89,6 +90,35 @@ Files in `public/` are served as-is at the site root, for example `/favicon.svg`
 4. Add an entry in `src/data/portfolio.ts`.
 
 ⚠️ The originals are gitignored, so keep your own backup.
+
+### `make-business-card.py`
+
+**Purpose:** generates print-ready business card PDFs into `print/`, using the same fonts and colors as the site.
+
+**Run it:**
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install segno reportlab fonttools brotli
+.venv/bin/python scripts/make-business-card.py          # both variants
+.venv/bin/python scripts/make-business-card.py site     # just one
+```
+
+It converts the site's variable fonts (from `node_modules`) into fixed weights and embeds them, so the card's type matches the website without needing the fonts installed on the printer's machine.
+
+Edit the wording, colors, or QR destinations at the top of the file.
+
+---
+
+## `print/` (generated, committed)
+
+| File | QR code goes to |
+|---|---|
+| `business-card-site.pdf` | `amaralocs.com/book` — use this once the domain is live |
+| `business-card-square.pdf` | her Square booking page — works today, before the site is live |
+
+Both are 3.5 × 2 in with 0.125 in bleed on every edge, which is what print shops ask for. Page 1 is the front and page 2 is the back.
+
+The look is espresso and gold, taken from Amara's reference card and built from the site's own `espresso`, `gold` and `sand` colors. The back carries a panel of her soft-locs photo down the right edge, faded into the background; `print/assets/locs-panel.jpg` comes from `optimize-media.sh` and the card falls back to a plain background if it's missing. The QR sits on a cream panel, because scanners are far more reliable with dark code on a light background than the reverse. Phone and Instagram lines appear on the back as soon as `INSTAGRAM` or `PHONE` are filled in at the top of the script.
 
 ---
 
@@ -147,6 +177,8 @@ Imports the optimized media and exports:
 - `GALLERY`, the order the Gallery page shows them in.
 
 Each piece's `service` field links it to a menu item, so the gallery can show "Book this style →".
+
+To add a gallery photo: put the original in `src/data/gallery/`, add an `image` line to `optimize-media.sh` (with a `crop=` filter if it's a screenshot with letterbox bars), run the script, then add an entry to `PORTFOLIO` and list it in `GALLERY` here. The label and the service link live in this file; `src/pages/Gallery.tsx` renders whatever `GALLERY` contains, in that order.
 
 ### `photos/` and `gallery/` (gitignored)
 

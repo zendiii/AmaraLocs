@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Seven more of Amara's loc photos in the Gallery (11 pieces total), each
+  linked to the service it shows. Letterbox bars from video screenshots are
+  cropped off in `optimize-media.sh`
 - Real portfolio media: Amara's headshot on About (with a second, casual
   photo overlapping it), two looping work videos and
   two photos in the Gallery, and the hero now shows her work instead of
@@ -19,6 +22,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   (HEIC → JPEG, HEVC → H.264 MP4, iPhone HDR → SDR, audio stripped, posters),
   cutting ~15 MB of originals to ~3 MB
 - Soft Locs service (Braids)
+- Business cards: `scripts/make-business-card.py` generates print-ready PDFs
+  into `print/` (3.5 x 2 in, 0.125 in bleed, embedded site fonts) in two
+  variants — QR to `amaralocs.com/book` or to the Square booking page.
+  Espresso-and-gold face taken from her reference card: "AMARA" in spaced
+  gold caps over an italic "Locs & Co.", the "Healthy locs · Beautifully
+  maintained" line, and a service row; back pairs a QR on a cream panel with a
+  faded panel of her soft-locs photo down the right edge
 - Square booking link connected: every Book button now opens Amara's Square
   booking page (Amara Locs & Co.)
 - `FILES.md`: a guide to every file's purpose, when to edit it, and the
