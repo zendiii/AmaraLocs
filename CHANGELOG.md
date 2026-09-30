@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Site icon rebuilt from the site's own Fraunces "A" in gold on espresso, with
+  the letter converted to vector outlines so it no longer depends on the
+  viewer having Georgia installed. `scripts/make-favicon.py` also emits a PNG
+  fallback and the 180px Apple touch icon
 - Instagram: handle `amara_locs.co` set in `src/config/site.ts`, which lights up
   the footer link and the booking fallback, plus an `InstagramCallout` at the
   top of the Gallery linking to her profile

@@ -55,7 +55,9 @@ Square Appointments owns availability, confirmations, and reminders. Amara updat
 
 | File | Purpose |
 |---|---|
-| `favicon.svg` | Browser tab icon: an "A" on the clay brand color. Placeholder until Amara has a logo. |
+| `favicon.svg` | Browser tab icon: a gold Fraunces "A" on espresso, matching the business cards. Placeholder until Amara has a logo. |
+| `favicon-96.png` | PNG fallback for browsers that ignore SVG icons. |
+| `apple-touch-icon.png` | 180px icon iOS uses when the site is saved to the home screen. |
 
 Files in `public/` are served as-is at the site root, for example `/favicon.svg`.
 
@@ -90,6 +92,16 @@ Files in `public/` are served as-is at the site root, for example `/favicon.svg`
 4. Add an entry in `src/data/portfolio.ts`.
 
 ⚠️ The originals are gitignored, so keep your own backup.
+
+### `make-favicon.py`
+
+**Purpose:** regenerates the site icons in `public/` from the Fraunces "A".
+
+**Run it:** `.venv/bin/python scripts/make-favicon.py` (same virtual environment as the card script, plus `pymupdf`).
+
+The letter is pulled from the font and written as outlines, so no font needs to be installed for it to render. Change the colors, letter or corner radius at the top of the file. When Amara has a logo, replace these files with icons cut from it and this script can go.
+
+---
 
 ### `make-business-card.py`
 
