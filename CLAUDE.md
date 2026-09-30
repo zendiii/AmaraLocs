@@ -8,6 +8,7 @@ Product vision lives in goal.md (gitignored) — read it before feature work. Go
 - Booking is Square Appointments (free plan). Amara manages availability in Square — no admin page, auth, or database here. Chosen over a custom backend on 2026-09-20 for zero maintenance plus Square's built-in reminders/rebooking
 - Book buttons link out to Square's hosted page rather than embedding their widget script (fragile in an SPA, and ads land in Instagram's in-app browser). All destinations resolve through src/services/booking.ts — never hardcode a Square URL in a component
 - Ads link to `/book?service=<slug>`. Service slugs in src/data/services.ts are public URLs — renaming one breaks live ads
+- Gallery stays manually curated (decided 2026-09-30). A live Instagram feed needs a Business/Creator account — Meta sunset the personal-account API in 2024 — and either a third-party feed service or a Meta app with a 60-day token to refresh. The Gallery links out to Instagram instead
 - `rebook` on a service is the recurring-client lever; keep it on anything clients repeat
 - Business details, handles, and the Square URL belong in src/config/site.ts only
 - Palette is a placeholder salon look (cream/clay/espresso) until Amara has a logo; resample from the logo then. Clay is darkened on purpose to keep AA contrast

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import BookButton from '../components/BookButton.tsx'
+import InstagramCallout from '../components/InstagramCallout.tsx'
 import MediaTile from '../components/MediaTile.tsx'
 import { GALLERY } from '../data/portfolio'
 
@@ -9,7 +10,13 @@ export default function Gallery() {
       <p className="eyebrow">Portfolio</p>
       <h1 className="mt-2 text-5xl">Gallery</h1>
       <p className="mt-4 max-w-xl text-mocha">A look at recent work. See something you love? Book it.</p>
-      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
+
+      <div className="mt-8">
+        <InstagramCallout />
+      </div>
+
+      <h2 className="mt-14 text-3xl">Recent work</h2>
+      <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
         {GALLERY.map((item) => (
           <figure key={item.src}>
             <MediaTile item={item} className="aspect-[3/4]" />

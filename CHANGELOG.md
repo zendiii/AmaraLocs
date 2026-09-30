@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Instagram: handle `amara_locs.co` set in `src/config/site.ts`, which lights up
+  the footer link and the booking fallback, plus an `InstagramCallout` at the
+  top of the Gallery linking to her profile
 - Seven more of Amara's loc photos in the Gallery (11 pieces total), each
   linked to the service it shows. Letterbox bars from video screenshots are
   cropped off in `optimize-media.sh`

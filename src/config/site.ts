@@ -20,7 +20,7 @@ export const SITE: {
   tagline: 'Locs, braids & natural hair',
   domain: 'amaralocs.com',
   area: '',
-  instagramHandle: '',
+  instagramHandle: 'amara_locs.co',
   email: '',
   builderName: 'SYVN',
   builderUrl: 'https://syvn.me',

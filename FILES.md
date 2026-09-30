@@ -206,6 +206,7 @@ Raw originals from her phone. They're only read by `optimize-media.sh` and never
 | `BookButton.tsx` | The **only** way to start a booking. Gets its destination from `services/booking.ts`, and shows "Online booking opens soon" instead of a dead link when nothing is configured. Styles: `solid` or `outline`. | Everywhere |
 | `ServiceCard.tsx` | One service: name, price, duration, description, the ↻ rebook cue, and "Book this". Highlighted when the service is the one someone linked to. | Home, Services, Book |
 | `MediaTile.tsx` | One photo or video of her work. Videos autoplay muted, looping and inline, the only way mobile browsers allow autoplay, and inline stops iOS going fullscreen. Visitors who've turned on **reduced motion** get the still image with play controls instead. | Home hero, Gallery |
+| `InstagramCallout.tsx` | Dark card at the top of the Gallery linking to her Instagram. Renders nothing when `instagramHandle` is empty. | Gallery |
 | `PhotoPlaceholder.tsx` | Labelled gradient block for missing photos. **Currently unused** now that real media exists. Kept for future sections. | — |
 
 ---
