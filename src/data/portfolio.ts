@@ -1,6 +1,10 @@
 import softLocs from '../assets/media/soft-locs.jpg'
 import amaraLocs from '../assets/media/amara-locs.jpg'
+import coiledLocStyle from '../assets/media/coiled-loc-style.mp4'
+import coiledLocStylePoster from '../assets/media/coiled-loc-style-poster.jpg'
 import colorLocsTwists from '../assets/media/color-locs-twists.jpg'
+import retwistSections from '../assets/media/retwist-sections.mp4'
+import retwistSectionsPoster from '../assets/media/retwist-sections-poster.jpg'
 import grownLocs from '../assets/media/grown-locs.jpg'
 import kidsLocsTopKnot from '../assets/media/kids-locs-top-knot.jpg'
 import retwistDiamondParts from '../assets/media/retwist-diamond-parts.jpg'
@@ -33,6 +37,20 @@ export const PORTFOLIO = {
     src: shortLocsRetwist,
     poster: shortLocsRetwistPoster,
     label: 'Retwist on short locs',
+    service: 'loc-retwist',
+  },
+  coiledLocStyle: {
+    kind: 'video',
+    src: coiledLocStyle,
+    poster: coiledLocStylePoster,
+    label: 'Coiled loc style',
+    service: 'loc-retwist-style',
+  },
+  retwistSections: {
+    kind: 'video',
+    src: retwistSections,
+    poster: retwistSectionsPoster,
+    label: 'Newly attached locs with sections',
     service: 'loc-retwist',
   },
   diamondParts: {
@@ -77,10 +95,12 @@ export const PORTFOLIO = {
 
 export const GALLERY: PortfolioItem[] = [
   PORTFOLIO.twoStrand,
+  PORTFOLIO.coiledLocStyle,
   PORTFOLIO.diamondParts,
   PORTFOLIO.softLocs,
   PORTFOLIO.colorLocs,
   PORTFOLIO.shortLocsRetwist,
+  PORTFOLIO.retwistSections,
   PORTFOLIO.shortLocsParts,
   PORTFOLIO.grownLocs,
   PORTFOLIO.gridParts,

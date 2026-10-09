@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Two more work videos in the Gallery (13 pieces total): sectioning before a
+  retwist, and a coiled loc style
+- Gallery videos now load and play only when scrolled into view, so a visitor
+  no longer downloads every clip up front
 - Site icon rebuilt from the site's own Fraunces "A" in gold on espresso, with
   the letter converted to vector outlines so it no longer depends on the
   viewer having Georgia installed. `scripts/make-favicon.py` also emits a PNG
@@ -40,6 +44,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   booking page (Amara Locs & Co.)
 - `FILES.md`: a guide to every file's purpose, when to edit it, and the
   reasoning behind how it's built
+
+### Removed
+
+- Silk Press service — she doesn't offer it. Square handoff list and CSV
+  regenerated to match
 
 ### Changed
 

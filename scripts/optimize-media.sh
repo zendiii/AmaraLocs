@@ -16,12 +16,14 @@ image() {
 }
 
 video() {
-  local filter="${3:+$3,}scale=720:-2,format=yuv420p"
-  ffmpeg -v error -y -i "$1" -vf "$filter" -an \
-    -c:v libx264 -profile:v high -crf 26 -preset slow -movflags +faststart \
+  local trim="${4:-}" width="${5:-720}" crf="${6:-26}"
+  local filter="${3:+$3,}scale=$width:-2,format=yuv420p"
+  # shellcheck disable=SC2086
+  ffmpeg -v error -y -i "$1" $trim -vf "$filter" -an \
+    -c:v libx264 -profile:v high -crf "$crf" -preset slow -movflags +faststart \
     "$OUT/$2.mp4"
   ffmpeg -v error -y -i "$OUT/$2.mp4" -frames:v 1 -q:v 4 "$OUT/$2-poster.jpg"
-  echo "  $2.mp4 (+ poster)"
+  echo "  $2.mp4 (+ poster) $(du -h "$OUT/$2.mp4" | cut -f1)"
 }
 
 echo "Photos"
@@ -49,7 +51,9 @@ echo "  print/assets/locs-panel.jpg"
 
 echo "Videos"
 video "$RAW_GALLERY/3433038888983368199.mov" short-locs-retwist
-video "$RAW_GALLERY/IMG_6183.MOV" two-strand-retwist \
-  "colorspace=all=bt709:iall=bt2020:itrc=bt2020-10:format=yuv420p"
+HDR_TO_SDR="colorspace=all=bt709:iall=bt2020:itrc=bt2020-10:format=yuv420p"
+video "$RAW_GALLERY/IMG_6183.MOV" two-strand-retwist "$HDR_TO_SDR"
+video "$RAW_GALLERY/IMG_0996.MOV" retwist-sections "$HDR_TO_SDR" "-t 4" 640 29
+video "$RAW_GALLERY/IMG_0997.MOV" coiled-loc-style "$HDR_TO_SDR"
 
 du -sh "$OUT"

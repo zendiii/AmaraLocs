@@ -136,14 +136,6 @@ export const SERVICES: Service[] = [
     price: 'from $65',
     duration: '1.5 hr',
   },
-  {
-    slug: 'silk-press',
-    name: 'Silk Press',
-    category: 'Natural Hair',
-    description: 'Sleek, bouncy straight style with heat protection throughout.',
-    price: 'from $95',
-    duration: '2 hr',
-  },
 ]
 
 export function findService(slug: string | null | undefined): Service | undefined {
